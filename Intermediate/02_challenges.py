@@ -40,12 +40,48 @@ print(is_anagram("Amor", "roma"))
 #   la que el siguiente siempre es la suma de los dos anteriores.
 #   0, 1, 1, 2, 3, 5, 8, 13...
 def fibonacci(n):
-    sucesion = [0]
+    sucesion = []
+    if (n >= 1):
+        sucesion = [0]
     if (n > 1):
         sucesion.append(1)
     for i in range(2, n):
         sucesion.append(sucesion[i - 1] + sucesion[i - 2])
     return sucesion
-        
-    
+            
 print(fibonacci(50))
+
+
+#  Escribe un programa que se encargue de comprobar si un número es o no primo.
+#  Hecho esto, imprime los números primos entre 1 y 100.
+def es_primo(number): # Comprueba si un numero es primo
+    divisores = []
+    for i in range(1, number):
+        if (number % i == 0):
+            divisores.append(i)
+    
+    if (divisores == [1]):
+        return True
+    else:
+        return False
+    
+def imprime_primos(): # Imprime primos entre el 1 y el 100
+    for i in range(1, 101):
+        if es_primo(i):
+            print(i)
+
+# print(es_primo(int(input("Introduzca un número: "))))
+
+imprime_primos()
+
+
+# Crea un programa que invierta el orden de una cadena de texto
+# sin usar funciones propias del lenguaje que lo hagan de forma automática.
+# - Si le pasamos "Hola mundo" nos retornaría "odnum aloH"
+def invertir_cadena(cadena):
+    reversed_cadena = ""
+    for i in range(1, len(cadena) + 1):
+        reversed_cadena += cadena[-1 * i]
+    return reversed_cadena
+        
+print(invertir_cadena("torpedo acuático"))
