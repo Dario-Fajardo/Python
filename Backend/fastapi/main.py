@@ -10,3 +10,6 @@ async def root():
 @app.get("/url")
 async def url():
     return { "url_youtube" : "https://www.youtube.com" }
+
+# Documentación con Redocly: /redoc
+# Documentación con Swagger: /docs
