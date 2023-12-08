@@ -1,2 +1,2 @@
 # Python
-Mierda varia de Python
+Cosas hechas para aprender Python
